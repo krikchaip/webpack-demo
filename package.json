@@ -5,13 +5,16 @@
   "repository": "https://github.com/krikchaip/webpack-demo.git",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "full-reload-watch": "webpack --watch",
+    "dev-server": "webpack-dev-server --open"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^3.0.7",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
     "lodash": "^4.17.5"
