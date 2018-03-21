@@ -1,6 +1,8 @@
 import { cube } from './math';
-import _ from 'lodash';
-import './style.css';
+
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
 
 // Note that we did not import the square method from the src/math.js module.
 // That function is what's known as "dead code", meaning an unused export that should be dropped.
