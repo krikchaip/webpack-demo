@@ -1,11 +1,21 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    // lodash is also imported within ./src/another-module.js and will thus be duplicated in both bundles.
+    index: './src/index.js',
+    another: './src/another-module.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  plugins: [
+    new HTMLWebpackPlugin({
+      title: 'Code Splitting'
+    })
+  ],
 };
 
 // to run specific config file use 'npx webpack --config path/to/webpack.config.js'
