@@ -1,0 +1,17 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "webpack tutorial from official site",
+  "repository": "https://github.com/krikchaip/webpack-demo.git",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
