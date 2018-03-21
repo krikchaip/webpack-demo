@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
@@ -12,9 +13,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new HTMLWebpackPlugin({
-      title: 'Code Splitting'
-    })
+    new HTMLWebpackPlugin({ title: 'Code Splitting' }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'common-bundle-name' }), // DEPRECATED
   ],
 };
 
