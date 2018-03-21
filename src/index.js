@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import Icon from './icon.jpg';
+import Data from './data.xml'; // able to import JSON without any loader
 
 function component() {
   var element = document.createElement('div');
@@ -15,6 +16,8 @@ function component() {
   myIcon.src = Icon;
   
   element.appendChild(myIcon);
+
+  console.log(Data);
 
   return element;
 }
